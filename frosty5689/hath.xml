@@ -1,10 +1,11 @@
-<?xml version="1.0"?>
-<Container version="2">
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
   <Name>frosty5689-hath</Name>
   <Repository>frosty5689/hath</Repository>
   <Registry>https://hub.docker.com/r/frosty5689/hath</Registry>
-  <Network>host</Network>
-  <Shell>sh</Shell>
+  <Networking>
+    <Mode>host</Mode>
+  </Networking>
   <Privileged>false</Privileged>
   <Support>https://e-hentai.org/hentaiathome.php</Support>
   <Project>https://e-hentai.org/</Project>
@@ -14,8 +15,6 @@
   <TemplateURL>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/hath.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/images/hath-icon.png</Icon>
   <ExtraParams>--user 99:100</ExtraParams>
-  <PostArgs/>
-  <CPUset/>
   <DonateText/>
   <DonateLink/>
   <Description/>
@@ -52,20 +51,19 @@
   </Data>
   <Environment>
     <Variable>
-      <Value/>
+      <Value>Insert client ID from https://e-hentai.org/hentaiathome.php</Value>
       <Name>HATH_CLIENT_ID</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
+      <Value>Insert client key from https://e-hentai.org/hentaiathome.php</Value>
       <Name>HATH_CLIENT_KEY</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
+      <Value>Set timezone if necessary</Value>
       <Name>TZ</Name>
       <Mode/>
     </Variable>
   </Environment>
-  <Labels/>
-</Container>
+</Containers>
