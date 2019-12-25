@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Containers>
+<?xml version="1.0"?>
+<Container version="2">
   <Name>frosty5689-hath</Name>
   <Repository>frosty5689/hath</Repository>
   <Registry>https://hub.docker.com/r/frosty5689/hath</Registry>
-  <Networking>
-    <Mode>host</Mode>
-  </Networking>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://e-hentai.org/hentaiathome.php</Support>
   <Project>https://e-hentai.org/</Project>
@@ -15,6 +15,9 @@
   <TemplateURL>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/hath.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/images/hath-icon.png</Icon>
   <ExtraParams>--user 99:100</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1576986726</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description/>
@@ -24,46 +27,55 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/hentaiathome/cache</HostDir>
+      <HostDir/>
       <ContainerDir>/hath/cache</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/hentaiathome/data</HostDir>
+      <HostDir/>
       <ContainerDir>/hath/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/hentaiathome/download/</HostDir>
+      <HostDir/>
       <ContainerDir>/hath/download</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/hentaiathome/log</HostDir>
+      <HostDir/>
       <ContainerDir>/hath/log</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/hentaiathome/tmp</HostDir>
+      <HostDir/>
       <ContainerDir>/hath/tmp</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
     <Variable>
-      <Value>Insert client ID from https://e-hentai.org/hentaiathome.php</Value>
+      <Value/>
       <Name>HATH_CLIENT_ID</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>Insert client key from https://e-hentai.org/hentaiathome.php</Value>
+      <Value/>
       <Name>HATH_CLIENT_KEY</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>Set timezone if necessary</Value>
+      <Value/>
       <Name>TZ</Name>
       <Mode/>
     </Variable>
   </Environment>
-</Containers>
+  <Labels/>
+  <Config Name="H@H Client ID" Target="HATH_CLIENT_ID" Default="" Mode="" Description="Put your client ID here" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="H@H Client Key" Target="HATH_CLIENT_KEY" Default="" Mode="" Description="Put your client key here" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="If necessary, set timezone" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Cache Directory" Target="/hath/cache" Default="/mnt/user/appdata/hath/cache" Mode="rw" Description="Location where cache is stored" Type="Path" Display="always" Required="true" Mask="true"/>
+  <Config Name="Data Directory" Target="/hath/data" Default="/mnt/user/appdata/hath/data" Mode="rw" Description="Location where the cache database is stored" Type="Path" Display="always" Required="true" Mask="true"/>
+  <Config Name="Download Directory" Target="/hath/download" Default="/mnt/user/appdata/hath/download" Mode="rw" Description="Location where the H@H downloader saves files" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Log Directory" Target="/hath/log" Default="/mnt/user/appdata/hath/log" Mode="rw" Description="Location of log files" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Temp Directory" Target="/hath/tmp" Default="/mnt/user/appdata/hath/tmp" Mode="rw" Description="Temp directory for H@H" Type="Path" Display="always" Required="false" Mask="false"/>
+</Container>
