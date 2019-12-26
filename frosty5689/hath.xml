@@ -17,8 +17,14 @@
   <DonateLink/>
   <Description/>
   <Networking>
-    <Mode>host</Mode>
-    <Publish/>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>8443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
@@ -65,6 +71,7 @@
     </Variable>
   </Environment>
   <Labels/>
+  <Config Name="H@H Port" Target="8443" Default="8443" Mode="tcp" Description="Put your H@H port here, the host port and container port should match" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="H@H Client ID" Target="HATH_CLIENT_ID" Default="" Mode="" Description="Put your client ID here" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="H@H Client Key" Target="HATH_CLIENT_KEY" Default="" Mode="" Description="Put your client key here" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="If necessary, set timezone" Type="Variable" Display="always" Required="false" Mask="false"/>
