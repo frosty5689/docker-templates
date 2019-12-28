@@ -74,6 +74,7 @@
   <Config Name="H@H Port" Target="8443" Default="8443" Mode="tcp" Description="Put your H@H port here, the host port and container port should match" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="H@H Client ID" Target="HATH_CLIENT_ID" Default="" Mode="" Description="Put your client ID here" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="H@H Client Key" Target="HATH_CLIENT_KEY" Default="" Mode="" Description="Put your client key here" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="UMASK" Target="UMASK" Default="000" Mode="" Description="Sets umask for files created by H@H" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="If necessary, set timezone" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Cache Directory" Target="/hath/cache" Default="/mnt/user/appdata/hath/cache" Mode="rw" Description="Location where cache is stored" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Data Directory" Target="/hath/data" Default="/mnt/user/appdata/hath/data" Mode="rw" Description="Location where the cache database is stored" Type="Path" Display="always" Required="true" Mask="false"/>
