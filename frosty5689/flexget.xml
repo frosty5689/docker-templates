@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
     <Name>cpoppema-flexget</Name>
-    <Repository>cpoppema/flexget</Repository>
+    <Repository>cpoppema/docker-flexget</Repository>
     <Registry>https://hub.docker.com/r/cpoppema/docker-flexget</Registry>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
