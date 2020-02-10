@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>cpoppema-flexget</Name>
+    <Repository>cpoppema/flexget</Repository>
+    <Registry>https://hub.docker.com/r/cpoppema/docker-flexget</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support>https://flexget.com/</Support>
+    <Project>https://flexget.com/</Project>
+    <Overview/>
+    <Category/>
+    <WebUI/>
+    <TemplateURL>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/hath.xml</TemplateURL>
+    <Icon>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/images/flexget-icon.png</Icon>
+    <DonateText/>
+    <DonateLink/>
+    <Description/>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>5050</HostPort>
+                <ContainerPort>5050</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir/>
+            <ContainerDir>/config</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment>
+        <Variable>
+            <Value/>
+            <Name>PUID</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>PGID</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>WEB_PASSWD</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>TORRENT_PLUGIN</Name>
+            <Mode/>
+        </Variable>
+    </Environment>
+    <Labels/>
+    <Config Name="FlexGet Web UI Port" Target="5050" Default="5050" Mode="tcp" Description="FlexGet Web UI Port" Type="Port" Display="always" Required="true" Mask="false"/>
+    <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID of user to run FlexGet" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID of user to run FlexGet" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="Web UI Password" Target="WEB_PASSWD" Default="changeme123" Mode="" Description="Replace with your desired Web UI password" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="Torrent Plugin" Target="TORRENT_PLUGIN" Default="deluge" Mode="" Description="Specify the required torrent plugins" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/flexget/config" Mode="rw" Description="Location where data for FlexGet is stored" Type="Path" Display="always" Required="true" Mask="false"/>
+</Container>
