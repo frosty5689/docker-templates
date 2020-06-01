@@ -11,7 +11,7 @@
     <Category/>
     <WebUI/>
     <TemplateURL>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/tshock.xml</TemplateURL>
-    <Icon>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/images/tshock-icon.jpg</Icon>
+    <Icon>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/images/tshock-icon.png</Icon>
     <DonateText/>
     <DonateLink/>
     <Description/>
