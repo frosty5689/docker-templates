@@ -40,6 +40,11 @@
         </Volume>
         <Volume>
             <HostDir/>
+            <ContainerDir>/root/.local/share/Terraria/Worlds</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+        <Volume>
+            <HostDir/>
             <ContainerDir>/logs</ContainerDir>
             <Mode>rw</Mode>
         </Volume>
@@ -70,6 +75,7 @@
     <Config Name="Terraria Server Port" Target="7777" Default="7777" Mode="tcp" Description="Terraria Server Port" Type="Port" Display="always" Required="true" Mask="false"/>
     <Config Name="TShock REST API Port" Target="7878" Default="7878" Mode="tcp" Description="TShock REST API Port" Type="Port" Display="always" Required="true" Mask="false"/>
     <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/tshock/config" Mode="rw" Description="Location where data for TShock is stored" Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="Worlds Directory" Target="/root/.local/share/Terraria/Worlds" Default="/mnt/user/appdata/tshock/worlds" Mode="rw" Description="Location where worlds for Terraria is stored" Type="Path" Display="always" Required="true" Mask="false"/>
     <Config Name="Logs Directory" Target="/logs" Default="/mnt/user/appdata/tshock/logs" Mode="rw" Description="Location where logs for TShock is stored" Type="Path" Display="always" Required="true" Mask="false"/>
     <Config Name="Plugins Directory" Target="/plugins" Default="/mnt/user/appdata/tshock/plugins" Mode="rw" Description="Location where plugins for TShock is stored" Type="Path" Display="always" Required="true" Mask="false"/>
     <Config Name="World filename" Target="WORLD_FILENAME" Default="the_world.wld" Mode="" Description="Replace with your desired world filename" Type="Variable" Display="always" Required="true" Mask="false"/>
