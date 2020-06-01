@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>ryshe-terraria</Name>
+    <Repository>ryshe/terraria:latest</Repository>
+    <Registry>https://hub.docker.com/r/ryshe/terraria</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support>https://tshock.readme.io/</Support>
+    <Project>https://tshock.readme.io/</Project>
+    <Overview/>
+    <Category/>
+    <WebUI/>
+    <TemplateURL>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/tshock.xml</TemplateURL>
+    <Icon>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/images/tshock-icon.jpg</Icon>
+    <DonateText/>
+    <DonateLink/>
+    <Description/>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>7777</HostPort>
+                <ContainerPort>7777</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+        <Publish>
+            <Port>
+                <HostPort>7878</HostPort>
+                <ContainerPort>7878</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir/>
+            <ContainerDir>/config</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+        <Volume>
+            <HostDir/>
+            <ContainerDir>/logs</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+        <Volume>
+            <HostDir/>
+            <ContainerDir>/plugins</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment>
+        <Variable>
+            <Value/>
+            <Name>CONFIGPATH</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>LOGPATH</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>WORLD_FILENAME</Name>
+            <Mode/>
+        </Variable>
+    </Environment>
+    <Labels/>
+    <Config Name="Terraria Server Port" Target="7777" Default="7777" Mode="tcp" Description="Terraria Server Port" Type="Port" Display="always" Required="true" Mask="false"/>
+    <Config Name="TShock REST API Port" Target="7878" Default="7878" Mode="tcp" Description="TShock REST API Port" Type="Port" Display="always" Required="true" Mask="false"/>
+    <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/tshock/config" Mode="rw" Description="Location where data for TShock is stored" Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="Logs Directory" Target="/logs" Default="/mnt/user/appdata/tshock/logs" Mode="rw" Description="Location where logs for TShock is stored" Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="Plugins Directory" Target="/plugins" Default="/mnt/user/appdata/tshock/plugins" Mode="rw" Description="Location where plugins for TShock is stored" Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="World filename" Target="WORLD_FILENAME" Default="the_world.wld" Mode="" Description="Replace with your desired world filename" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="Config Path" Target="CONFIGPATH" Default="/config" Mode="" Description="Location of TShock data inside container" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Logs Path" Target="LOGPATH" Default="/logs" Mode="" Description="Location of TShock logs inside container" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
