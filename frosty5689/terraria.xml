@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
     <Name>beardedio-terraria</Name>
-    <Repository>beardedio/terraria:vanilla</Repository>
+    <Repository>beardedio/terraria:vanilla-latest</Repository>
     <Registry>https://hub.docker.com/r/beardedio/terraria</Registry>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
