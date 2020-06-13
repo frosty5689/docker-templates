@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>thmhoag-arkserver</Name>
+    <Repository>thmhoag/arkserver:latest</Repository>
+    <Registry>https://hub.docker.com/r/thmhoag/arkserver</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/FezVrasta/ark-server-tools</Support>
+    <Project>https://github.com/FezVrasta/ark-server-tools</Project>
+    <Overview/>
+    <Category/>
+    <WebUI/>
+    <TemplateURL>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/arkserver.xml</TemplateURL>
+    <Icon>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/images/arkserver-icon.png</Icon>
+    <DonateText/>
+    <DonateLink/>
+    <Description/>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>7777</HostPort>
+                <ContainerPort>7777</ContainerPort>
+                <Protocol>udp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>7778</HostPort>
+                <ContainerPort>7778</ContainerPort>
+                <Protocol>udp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>27015</HostPort>
+                <ContainerPort>27015</ContainerPort>
+                <Protocol>udp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>27020</HostPort>
+                <ContainerPort>27020</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir/>
+            <ContainerDir>/ark</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+        <Volume>
+            <HostDir/>
+            <ContainerDir>/home/steam/Steam</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment>
+        <Variable>
+            <Value/>
+            <Name>am_ark_SessionName</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>am_serverMap</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>am_ark_ServerAdminPassword</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>am_ark_MaxPlayers</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>am_ark_QueryPort</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>am_ark_Port</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>am_ark_RCONPort</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>am_arkwarnminutes</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>am_arkflag_crossplay</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>am_arkflag_epiconly</Name>
+            <Mode/>
+        </Variable>
+    </Environment>
+    <Labels/>
+    <Config Name="Game Client Port" Target="7777" Default="7777" Mode="udp" Description="Game client port" Type="Port" Display="always" Required="true" Mask="false"/>
+    <Config Name="Raw UDP Socket Port" Target="7778" Default="7778" Mode="udp" Description="Raw UDP socket port (always Game client port +1)" Type="Port" Display="always" Required="true" Mask="false"/>
+    <Config Name="Steam Query Port" Target="27015" Default="27015" Mode="udp" Description="Query port for Steam's server browser" Type="Port" Display="always" Required="true" Mask="false"/>
+    <Config Name="RCON Port" Target="27020" Default="27020" Mode="udp" Description="RCON for remote console server access (optional)" Type="Port" Display="always" Required="false" Mask="false"/>
+    <Config Name="Data Directory" Target="/ark" Default="/mnt/user/appdata/arkserver/data" Mode="rw" Description="Location where data for Ark Server is stored" Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="Steam Directory" Target="/home/steam/Steam" Default="/mnt/user/appdata/arkserver/steam" Mode="rw" Description="Location where steam downloads are stored" Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="Session Name" Target="am_ark_SessionName" Default="Ark Server" Mode="" Description="Server name as it will show on the steam server list" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Server Map" Target="am_serverMap" Default="TheIsland" Mode="" Description="Game map to load" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Server Admin Password" Target="am_ark_ServerAdminPassword" Default="PleaseChangeMe123" Mode="" Description="Admin password to be used via ingame console or RCON" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Max Players" Target="am_ark_MaxPlayers" Default="70" Mode="" Description="Max concurrent players in the game" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Steam Query Port" Target="am_ark_QueryPort" Default="27015" Mode="" Description="Steam query port (allows the server to show up on the steam list)" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Game Server Port" Target="am_ark_Port" Default="7778" Mode="" Description="Game server port (allows clients to connect to the server)" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="RCON Port" Target="am_ark_RCONPort" Default="27020" Mode="" Description="RCON port" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Warning Minutes" Target="am_arkwarnminutes" Default="15" Mode="" Description="Number of minutes to wait/warn players before updating/restarting" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Cross Play" Target="am_arkflag_crossplay" Default="true" Mode="" Description="Enables Crossplay (between EPIC and Steam) on Dedicated Server (remove this variable if not desired)" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="Epic Only" Target="am_arkflag_epiconly" Default="true" Mode="" Description="Enables Epic Game Store only players to connect to the Dedicated Server (remove this variable if not desired)" Type="Variable" Display="always" Required="true" Mask="false"/>
+</Container>
