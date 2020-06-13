@@ -65,6 +65,11 @@
         </Variable>
         <Variable>
             <Value/>
+            <Name>am_ark_ServerPassword</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
             <Name>am_ark_ServerAdminPassword</Name>
             <Mode/>
         </Variable>
@@ -113,6 +118,7 @@
     <Config Name="Steam Directory" Target="/home/steam/Steam" Default="/mnt/user/appdata/arkserver/steam" Mode="rw" Description="Location where steam downloads are stored" Type="Path" Display="always" Required="true" Mask="false"/>
     <Config Name="Session Name" Target="am_ark_SessionName" Default="Ark Server" Mode="" Description="Server name as it will show on the steam server list" Type="Variable" Display="always" Required="false" Mask="false"/>
     <Config Name="Server Map" Target="am_serverMap" Default="TheIsland" Mode="" Description="Game map to load" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Server Password" Target="am_ark_ServerPassword" Default="123456" Mode="" Description="If specified, players must provide this password to join the server." Type="Variable" Display="always" Required="false" Mask="false"/>
     <Config Name="Server Admin Password" Target="am_ark_ServerAdminPassword" Default="PleaseChangeMe123" Mode="" Description="Admin password to be used via ingame console or RCON" Type="Variable" Display="always" Required="false" Mask="false"/>
     <Config Name="Max Players" Target="am_ark_MaxPlayers" Default="70" Mode="" Description="Max concurrent players in the game" Type="Variable" Display="always" Required="false" Mask="false"/>
     <Config Name="Steam Query Port" Target="am_ark_QueryPort" Default="27015" Mode="" Description="Steam query port (allows the server to show up on the steam list)" Type="Variable" Display="always" Required="false" Mask="false"/>
