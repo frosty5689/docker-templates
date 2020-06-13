@@ -106,7 +106,7 @@
     </Environment>
     <Labels/>
     <Config Name="Game Client Port" Target="7777" Default="7777" Mode="udp" Description="Game client port" Type="Port" Display="always" Required="true" Mask="false"/>
-    <Config Name="Raw UDP Socket Port" Target="7778" Default="7778" Mode="udp" Description="Raw UDP socket port (always Game client port +1)" Type="Port" Display="always" Required="true" Mask="false"/>
+    <Config Name="Game Server Port" Target="7778" Default="7778" Mode="udp" Description="Game server port (always Game client port +1)" Type="Port" Display="always" Required="true" Mask="false"/>
     <Config Name="Steam Query Port" Target="27015" Default="27015" Mode="udp" Description="Query port for Steam's server browser" Type="Port" Display="always" Required="true" Mask="false"/>
     <Config Name="RCON Port" Target="27020" Default="27020" Mode="udp" Description="RCON for remote console server access (optional)" Type="Port" Display="always" Required="false" Mask="false"/>
     <Config Name="Data Directory" Target="/ark" Default="/mnt/user/appdata/arkserver/data" Mode="rw" Description="Location where data for Ark Server is stored" Type="Path" Display="always" Required="true" Mask="false"/>
