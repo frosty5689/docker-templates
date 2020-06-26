@@ -103,11 +103,6 @@
             <Name>am_arkflag_crossplay</Name>
             <Mode/>
         </Variable>
-        <Variable>
-            <Value/>
-            <Name>am_arkflag_epiconly</Name>
-            <Mode/>
-        </Variable>
     </Environment>
     <Labels/>
     <Config Name="Game Client Port" Target="7777" Default="7777" Mode="udp" Description="Game client port" Type="Port" Display="always" Required="true" Mask="false"/>
@@ -126,5 +121,4 @@
     <Config Name="RCON Port" Target="am_ark_RCONPort" Default="27020" Mode="" Description="RCON port" Type="Variable" Display="always" Required="false" Mask="false"/>
     <Config Name="Warning Minutes" Target="am_arkwarnminutes" Default="15" Mode="" Description="Number of minutes to wait/warn players before updating/restarting" Type="Variable" Display="always" Required="false" Mask="false"/>
     <Config Name="Cross Play" Target="am_arkflag_crossplay" Default="true" Mode="" Description="Enables Crossplay (between EPIC and Steam) on Dedicated Server (remove this variable if not desired)" Type="Variable" Display="always" Required="false" Mask="false"/>
-    <Config Name="Epic Only" Target="am_arkflag_epiconly" Default="true" Mode="" Description="Enables Epic Game Store only players to connect to the Dedicated Server (remove this variable if not desired)" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
