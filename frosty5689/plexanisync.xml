@@ -12,7 +12,7 @@
     <WebUI/>
     <TemplateURL>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/plexanisync.xml</TemplateURL>
     <Icon>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/images/plexanisync-icon.png</Icon>
-    <ExtraParams>--user 99:100</ExtraParams>
+    <ExtraParams></ExtraParams>
     <DonateText/>
     <DonateLink/>
     <Description/>
