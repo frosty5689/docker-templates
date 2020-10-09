@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
     <Name>frosty5689-plexanisync</Name>
-    <Repository>frosty5689/hath</Repository>
+    <Repository>frosty5689/plexanisync</Repository>
     <Registry>https://hub.docker.com/r/frosty5689/plexanisync</Registry>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
