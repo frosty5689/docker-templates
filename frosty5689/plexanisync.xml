@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>frosty5689-plexanisync</Name>
+    <Repository>frosty5689/hath</Repository>
+    <Registry>https://hub.docker.com/r/frosty5689/plexanisync</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/RickDB/PlexAniSync</Support>
+    <Project>https://github.com/RickDB/PlexAniSync</Project>
+    <Overview/>
+    <Category/>
+    <WebUI/>
+    <TemplateURL>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/plexanisync.xml</TemplateURL>
+    <Icon>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/images/plexanisync-icon.png</Icon>
+    <ExtraParams>--user 99:100</ExtraParams>
+    <DonateText/>
+    <DonateLink/>
+    <Description/>
+    <Networking>
+        <Mode>bridge</Mode>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir/>
+            <ContainerDir>/config</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment>
+        <Variable>
+            <Value/>
+            <Name>PLEX_SECTION</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>PLEX_URL</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>PLEX_TOKEN</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>ANI_USERNAME</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>ANI_TOKEN</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>INTERVAL</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>CUSTOM_MAPPINGS</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>PLEX_EPISODE_COUNT_PRIORITY</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>SKIP_LIST_UPDATE</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>TZ</Name>
+            <Mode/>
+        </Variable>
+    </Environment>
+    <Labels/>
+    <Config Name="Plex Section" Target="PLEX_SECTION" Default="Anime" Mode="" Description="The library where your anime resides" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="Plex URL" Target="PLEX_URL" Default="" Mode="" Description="The address to your Plex Media Server, for example: http://127.0.0.1:32400" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="Plex Token" Target="PLEX_TOKEN" Default="" Mode="" Description="Follow https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token" Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="AniList Username" Target="ANI_USERNAME" Default="" Mode="" Description="Your AniList.co username" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="AniList Token" Target="ANI_TOKEN" Default="" Mode="" Description="Get it https://anilist.co/api/v2/oauth/authorize?client_id=1549&amp;response_type=token" Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="Interval" Target="INTERVAL" Default="3600" Mode="" Description="Time between syncs" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="Custom Mappings" Target="CUSTOM_MAPPINGS" Default="" Mode="" Description="Specifiy local file or URL to a text file containing content for a custom_mappings.ini file" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Plex Episode Count Priority" Target="PLEX_EPISODE_COUNT_PRIORITY" Default="False" Mode="" Description="Plex episode watched count will take priority over AniList (default = False)" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Skip List Update" Target="SKIP_LIST_UPDATE" Default="False" Mode="" Description="If set to True it will NOT update your AniList which is useful if you want to do a test run to check if everything lines up properly. (default = False)" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="If necessary, set timezone" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/plexanisync/config" Mode="rw" Description="Location where config is stored" Type="Path" Display="always" Required="true" Mask="false"/>
+</Container>
