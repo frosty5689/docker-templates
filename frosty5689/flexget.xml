@@ -9,8 +9,8 @@
     <Project>https://flexget.com/</Project>
     <Overview/>
     <Category/>
-    <WebUI/>
-    <TemplateURL>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/hath.xml</TemplateURL>
+    <WebUI>http://[IP]:[PORT:5050]/</WebUI>
+    <TemplateURL>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/flexget.xml</TemplateURL>
     <Icon>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/images/flexget-icon.png</Icon>
     <DonateText/>
     <DonateLink/>
