@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>justarchi-archisteamfarm</Name>
+  <Repository>justarchi/archisteamfarm:main</Repository>
+  <Registry>https://hub.docker.com/r/justarchi/archisteamfarm</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/JustArchiNET/ArchiSteamFarm</Project>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:1242]/</WebUI>
+<TemplateURL>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/archisteamfarm.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/frosty5689/docker-templates/master/frosty5689/images/archisteamfarm-icon.jpg</Icon>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1242</HostPort>
+        <ContainerPort>1242</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/app/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/app/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Config" Target="/app/config" Default="" Mode="rw" Description="ASF Config Directory" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/justarchi-archisteamfarm/config</Config>
+  <Config Name="Logs" Target="/app/logs" Default="" Mode="rw" Description="ASF Logs Directory" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/justarchi-archisteamfarm/log</Config>
+  <Config Name="ASF-ui" Target="1242" Default="" Mode="tcp" Description="ASF Web UI Port" Type="Port" Display="always" Required="false" Mask="false">1242</Config>
+</Container>
